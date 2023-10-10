@@ -1,5 +1,4 @@
-import { PokemonEnum } from "pokemon-sdk";
-import { Pokemon } from "@/pokemon-client";
+import { fetchPokemon, Pokemon } from "@/pokemon-client";
 
 function PokemonDataView({ pokemon }: { pokemon: Pokemon }) {
   return (
@@ -21,7 +20,13 @@ function PokemonDataView({ pokemon }: { pokemon: Pokemon }) {
     </>
   );
 }
-function PokemonInfo({ pokemon }: { pokemon: Pokemon }) {
+export default async function PokemonInfo({
+  params,
+}: {
+  params: { pokemonName: string };
+}) {
+  const { pokemonName } = params;
+  const pokemon = await fetchPokemon({ pokemon: pokemonName });
   return (
     <div className={"pokemon-info"}>
       <div className="pokemon-info__img-wrapper">
@@ -31,5 +36,3 @@ function PokemonInfo({ pokemon }: { pokemon: Pokemon }) {
     </div>
   );
 }
-
-export { PokemonInfo, PokemonDataView };
