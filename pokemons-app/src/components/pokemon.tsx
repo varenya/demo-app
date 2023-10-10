@@ -4,7 +4,7 @@ import { Pokemon } from "@/pokemon-client";
 const homepage = "https://react-suspense.netlify.app/";
 const fallbackImgUrl = `${homepage}img/pokemon/fallback-pokemon.jpg`;
 function PokemonInfoFallback({ name }: { name: string }) {
-  const fallbackPokemonData: Pokemon = {
+  const pokemon: Pokemon = {
     key: PokemonEnum.Charizard,
     num: 0,
     abilities: {
@@ -20,7 +20,20 @@ function PokemonInfoFallback({ name }: { name: string }) {
       <div className="pokemon-info__img-wrapper">
         <img src={fallbackImgUrl} alt={name} />
       </div>
-      <PokemonDataView pokemon={fallbackPokemonData} />
+      <section>
+        <h2>
+          {"loading.."}
+          <sup>{pokemon.num}</sup>
+        </h2>
+      </section>
+      <section>
+        <ul>
+          <li>{pokemon.abilities.first.name}</li>
+          {pokemon.abilities && pokemon.abilities.special ? (
+            <li>{pokemon.abilities.special.name}</li>
+          ) : null}
+        </ul>
+      </section>
     </div>
   );
 }
