@@ -1,0 +1,15 @@
+{
+  "include": ["sdk.ts"],
+  "compilerOptions": {
+    "lib" : ["esnext","esnext.asynciterable"],
+    "module": "commonjs",
+    "target": "es2015",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": "./"
+  },
+  "exclude": [
+    "node_modules",
+    "dist/**/*.js"
+  ]
+}

@@ -1,0 +1,4 @@
+packages:
+  - 'pokemon-sdk'
+  - 'pokemons-app'
+  - '!**/test/**'
