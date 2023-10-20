@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "generate:sdk": "pnpm --filter pokemon-sdk run generate:sdk",
-    "client:app": "pnpm --filter pokemons run dev"
+    "client:app": "pnpm --filter pokemons run dev",
+    "server:app": "pnpm --filter pokemons-app run dev"
   },
   "keywords": [],
   "author": "",
