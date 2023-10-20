@@ -14,7 +14,12 @@ iframe {
 }
 
 .pokemon-info-app a {
-  color: #cc0000;
+  color: hotpink;
+  cursor: pointer;
+}
+
+.pokemon-info a.active {
+  color: palevioletred;
 }
 
 .pokemon-info-app a:focus,
