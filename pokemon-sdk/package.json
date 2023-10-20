@@ -1,0 +1,23 @@
+{
+  "name": "pokemon-sdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sdk.ts",
+  "scripts": {
+    "generate:sdk": "graphql-codegen",
+    "compile": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^16.8.1",
+    "graphql-request": "^6.1.0",
+    "graphql-tag": "^2.12.6"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1"
+  }
+}

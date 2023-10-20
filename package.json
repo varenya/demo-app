@@ -1,0 +1,26 @@
+{
+  "name": "demo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate:sdk": "pnpm --filter pokemon-sdk run generate:sdk",
+    "client:app": "pnpm --filter pokemons run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql-request": "^6.1.0",
+    "pokemon": "^2.3.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/typescript-graphql-request": "^6.0.0",
+    "pokemon-sdk": "workspace:^",
+    "pokemons": "^1.1.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.0.2"
+  }
+}
